@@ -151,19 +151,19 @@ public class UiAutomatorView extends Composite {
             @Override
             public void mouseUp(MouseEvent e) {
                 //点击左键
-                if (mModel != null && e.button == 1) {
-                    mModel.toggleExploreMode();
-                    redrawScreenshot();
-                }else if (mModel != null && e.button == 3) {
+//                if (mModel != null && e.button == 1) {
+//                    mModel.toggleExploreMode();
+//                    redrawScreenshot();
+//                }else if (mModel != null && e.button == 3) {
                     int x = getInverseScaledSize(e.x - mDx);
                     int y = getInverseScaledSize(e.y - mDy);
 //                	 int x = (e.x - mDx);
 //                     int y = (e.y - mDy);
                     if (mDevice != null) {
-                        UiAutomatorHelper.click(mDevice, x, y);
+                        UiAutomatorHelper.click2(mDevice, x, y);
                         mScreenshotAction.run();
                     }
-                }
+//                }
             }
         });
         mScreenshotCanvas.setBackground(
